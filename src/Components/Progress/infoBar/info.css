@@ -1,0 +1,11 @@
+.info-icon{
+    height: 24px;
+    width: 24px;
+    display: inline-block;
+    margin-left: 40px;
+    margin-right: 10px;
+}
+
+.info-text{
+    display: inline-block
+}

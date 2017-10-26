@@ -1,0 +1,37 @@
+body.modal-open {
+    overflow: hidden;
+    position:fixed;
+    width: 100%;
+}
+
+.modal-dialog{
+    margin: 140px auto !important;
+}
+
+.progress-header{
+    background-color: black;
+    color: white;
+}
+
+.modal-header button span{
+    color: white !important;
+    
+}
+
+.modal-body{
+    height: 160px;
+    background-color: lightgrey;
+}
+
+.progress-wrapper{
+    background-color: white;
+    height: 100%;
+    padding: 20px;
+    margin: auto;
+    border-radius: 5px;
+    border: 2px solid grey;
+}
+
+.progress-wrapper .row{
+    margin-bottom: 10px;
+}

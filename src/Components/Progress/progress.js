@@ -21,12 +21,8 @@ class Progress extends React.Component {
             <ModalHeader toggle={this.props.toggleFunc} className="progress-header">Your Progress</ModalHeader>
             <ModalBody>
                 <div className="container progress-wrapper">
-                    <div className="row">
-                        <ProgressBar total={this.state.total} targetValue={this.state.target}/>
-                    </div>
-                    <div className="row">
-                        <InfoBar targetValue={this.state.target-this.state.total}/>
-                    </div>
+                    <ProgressBar total={this.state.total} targetValue={this.state.target}/>
+                    <InfoBar targetValue={this.state.target-this.state.total}/>
                 </div>
             </ModalBody>
           </Modal>

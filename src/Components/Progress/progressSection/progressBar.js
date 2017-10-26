@@ -30,7 +30,7 @@ class ProgressBar extends React.Component {
   
     render() {
       return (
-        <div className="col-mid-12">
+        <div className="progress-main-wrapper">
             <p className="progress-text">Reached:</p>
             <div className="bar-wrapper">
                 <div className="bar-total-wrapper">

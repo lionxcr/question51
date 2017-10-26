@@ -1,7 +1,7 @@
 import React from 'react';
 import './progress.css';
-import InfoBar from './infoBar/info';
-import ProgressBar from './progressBar/progressBar';
+import InfoBar from './infoSection/info';
+import ProgressBar from './progressSection/progressBar';
 import {Modal, ModalHeader, ModalBody } from 'reactstrap';
 
 class Progress extends React.Component {

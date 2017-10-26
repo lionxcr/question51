@@ -1,6 +1,5 @@
 import React from 'react';
 import './progressBar.css';
-import ReactCSSTransitionGroup from 'react-addons-css-transition-group';
 
 class ProgressBar extends React.Component {
     constructor(props) {

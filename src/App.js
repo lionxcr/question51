@@ -7,7 +7,7 @@ class App extends Component {
   constructor(props){
     super(props)
     this.state = {
-      showDialog: true
+      showDialog: false
     }
     
     this.showModal = this.showModal.bind(this);

@@ -35,6 +35,11 @@
 
 .bar-completed{
     background-color: green;
+    -webkit-transition: width 1s;
+    -moz-transition: width 1s;
+    -o-transition: width 1s;
+    -ms-transition: width 1s;
+    transition: width 1s;
     height: 14px;
 }
 
@@ -44,6 +49,11 @@
     padding: 0;
     font-weight: bolder;
     position: relative;
+    -webkit-transition: opacity 1.5s ease-in;
+    -moz-transition: opacity 1.5s ease-in;
+    -o-transition: opacity 1.5s ease-in;
+    -ms-transition: opacity 1.5s ease-in;
+    transition: opacity 1.5s ease-in;
 }
 
 .target-wrapper{

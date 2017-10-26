@@ -9,18 +9,24 @@ class ProgressBar extends React.Component {
         total: this.props.total,
         target: this.props.targetValue,
         progress: 0,
-        totalLeft:0
+        totalLeft:0,
+        totalOpacity: 0
       };
     }
 
     componentDidMount(){
         const progressPercentage = this.state.total/this.state.target * 100;
-        this.setState({
-            total: this.state.total,
-            target: this.state.target,
-            progress: progressPercentage,
-            totalLeft: progressPercentage-2.5
-        })
+        const ANIMATION_TIMEOUT = 500;
+        setTimeout(() => {
+            this.setState({
+                total: this.state.total,
+                target: this.state.target,
+                progress: progressPercentage,
+                totalLeft: progressPercentage-2.5,
+                totalOpacity: 1
+            })
+          }, ANIMATION_TIMEOUT);
+       
     }
   
     render() {
@@ -29,16 +35,9 @@ class ProgressBar extends React.Component {
             <p className="progress-text">Reached:</p>
             <div className="bar-wrapper">
                 <div className="bar-total-wrapper">
-                    <ReactCSSTransitionGroup
-                    transitionName="progress"
-                    transitionAppear={true}
-                    transitionEnter={false}
-                    transitionLeave={false}
-                    transitionAppearTimeout={600}>
-                        <div className="bar-completed" style={{ width: `${this.state.progress}%`}}></div>
-                    </ReactCSSTransitionGroup>
+                    <div className="bar-completed" style={{ width: `${this.state.progress}%`}}></div>
                 </div>
-                <div className="total-wrapper" style={{ left: `${this.state.totalLeft}%`}}>
+                <div className="total-wrapper" style={{ left: `${this.state.totalLeft}%`, opacity: this.state.totalOpacity}}>
                     <span>^</span>
                     <p>${this.state.total}</p>
                 </div>
